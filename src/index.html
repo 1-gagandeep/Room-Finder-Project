@@ -1,0 +1,141 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body id="back">
+    <img
+      src="https://www.bing.com/th/id/OGC.d52e675e151938c56707d1785e5bbc2c?pid=1.7&rurl=https%3a%2f%2fassets.techsmith.com%2fImages%2fcontent%2fua-tutorials-snagitMac-4%2f7home-livingroom.gif&ehk=TuaOofZhQaGbU5dhKTwoQroRs5bOao7SJk6JK8QN0gI%3d"
+      height="40%"
+      width="100%"
+    />
+    <h1
+      style="color: maroon; background-color: yellowgreen; text-align: center"
+    >
+      Room Finder
+    </h1>
+    <div ng-app="">
+      <form>
+        <h3>Enter Name: <input type="text" ng-model="name" class="t" /></h3>
+        <h3>
+          Enter Mobile Number:
+          <input type="number" ng-model="number" class="t" />
+        </h3>
+        <form name="myForm">
+          <h3>
+            Enter E-mail:
+            <input
+              type="email"
+              name="myInput"
+              ng-model="myInput"
+              required
+              class="t"
+            />
+          </h3>
+        </form>
+        <h3>
+          Enter Number of Persons:
+          <select ng-model="n1" class="t">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </h3>
+
+        <h3>
+          Type of Room: Single Room
+          <input type="radio" ng-model="r1" value="single" /> Deluxe Room
+          <input type="radio" ng-model="r1" value="delux" />
+        </h3>
+
+        <h3>
+          Select City:
+          <select ng-model="city" class="t">
+            <option value="Patna">Patna</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+        </h3>
+
+        <h3>
+          Select Days:
+          <select ng-model="days" class="t">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="More">More</option>
+          </select>
+        </h3>
+
+        <button
+          style="
+            color: light;
+            background-color: greenyellow;
+            border-radius: 20px;
+            border-color: lime;
+            margin-left: 50px;
+          "
+        >
+          Submit
+        </button>
+      </form>
+      <h3>Your name is: {{name}}</h3>
+      <h3>Your number is: +91 {{number}}</h3>
+      <h3>{{myForm.myInput.$valid}}</h3>
+      <h3>
+        You are:
+        <div ng-switch="n1">
+          <div ng-switch-when="1">1</div>
+          <div ng-switch-when="2">2</div>
+          <div ng-switch-when="3">3</div>
+          <div ng-switch-when="4">4</div>
+        </div>
+      </h3>
+
+      <h3>
+        You have choosen room as:
+        <div ng-switch="r1">
+          <div ng-switch-when="single">
+            Single: Rent for single room is Rs. 1500
+          </div>
+          <div ng-switch-when="delux">
+            Delux: Rent for single room is Rs. 3500
+          </div>
+        </div>
+      </h3>
+
+      <h3>
+        You have Choosen City as:
+        <div ng-switch="city">
+          <div ng-switch-when="Patna">Patna</div>
+          <div ng-switch-when="Kanpur">Kanpur</div>
+          <div ng-switch-when="Delhi">Delhi</div>
+          <div ng-switch-when="Noida">Noida</div>
+          <div ng-switch-when="Mumbai">Mumbai</div>
+        </div>
+      </h3>
+
+      <h3>
+        You have Choosen Days as:
+        <div ng-switch="days">
+          <div ng-switch-when="1">1</div>
+          <div ng-switch-when="2">2</div>
+          <div ng-switch-when="3">3</div>
+          <div ng-switch-when="4">4</div>
+          <div ng-switch-when="More">More</div>
+        </div>
+      </h3>
+    </div>
+    <style>
+      #back {
+        background-image: url('https://www.pringlehomes.co.uk/wp-content/uploads/2019/12/04-Cavendish-Master-Bedroom-edit.jpg');
+        color: #3f2020;
+      }
+
+      .t {
+        border-radius: 20px;
+      }
+    </style>
+  </body>
+</html>
